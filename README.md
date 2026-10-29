@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 1st Fizmat AI Olympiad — tasks, materials & contest links.
+  🎓 1st edition — tasks, materials & contest links.
 </p>
 
 <p align="center">
