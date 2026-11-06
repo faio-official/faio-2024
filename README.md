@@ -40,6 +40,7 @@
 ---
 
 ## Other years
+- [FAIO 2026](https://github.com/faio-official/faio-2026)
 - [FAIO 2025](https://github.com/faio-official/faio-2025)
 - [All FAIO repositories](https://github.com/faio-official)
 
