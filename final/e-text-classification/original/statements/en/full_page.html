@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Text Classification</h1><table><tr class="time-limit"><td class="property-title">Time limit</td><td>600&nbsp;seconds</td></tr><tr class="memory-limit"><td class="property-title">Memory limit</td><td>300&nbsp;Mb</td></tr><tr class="input-file"><td class="property-title">Input</td><td colspan="1">standard input or input.txt</td></tr><tr class="output-file"><td class="property-title">Output</td><td colspan="1">standard output or output.txt</td></tr></table></div><h2></h2><div class="legend"><p>Senior meteorologist Adilkhan works at Kazhydromet in Almaty and is always striving to stay at the forefront of scientific advancements. He follows the latest discoveries in meteorology and shares interesting articles with his colleagues. One day, Adilkhan assigned his intern Darkhan an important task: to analyze scientific articles and news for the meteorological service.</p> 
+<p>However, Darkhan, in addition to his love for meteorology, was an avid reader of Medium. He spent hours reading, but instead of climate-related articles, he sent materials about football, space, and robots. Adilkhan was shocked when texts about World Cup tournaments and space missions ended up on his desk.</p> 
+<p>Thinking it over, Adilkhan realized that Darkhan simply didn’t know how to properly classify articles. So, he decided to help his intern and come up with a way to efficiently sort texts using keywords that would clearly indicate the subject of the article.</p> 
+<p>Text classification using keywords is a important part of modern conversational systems (chatbots, assistants). This method allows us to accurately, and more importantly, reliably determine user intent and correctly guide them through the system’s appropriate response flow.</p> 
+<p>The task is to create an algorithm that, based on keywords from a dataset of Medium articles, can accurately match each text to its corresponding Tag. The main dataset required for this is available at: <a href="https://disk.yandex.ru/d/FXehRMjaXkwUTA">train_set.csv</a>.</p> 
+<p>It contains around 50,000 examples and 95 unique classes/Tags. The dataset is in CSV format, with columns separated by the “\t” symbol (i.e., four spaces or a Tab).</p> 
+<p><strong>Text</strong> — the title and subtitle of the article.<br> <strong>Tag</strong> — the label or class of the text.<br> <strong>Keywords</strong> — a set of words extracted from multiple texts that belong to a specific tag (for example, for the tag “football,” the keywords could be: ’Football,’ ’league of champions,’ ’Cristiano,’ ’Cristiano Ronaldo,’ ’cr7,’ ’world cup,’ ’Ballon d’Or’).<br> <strong>Metric</strong> or rule for scoring: percentage (%) of correctly predicted classes/Tags from the hidden dataset</p> 
+<p><strong>Example:</strong><br> <em>Text</em> — Brazil wins the World Cup for the fifth time in Japan and South Korea.<br> <em>Tag</em> — football</p> 
+<h1 id="general-steps">General Steps:</h1> 
+<ol> 
+ <li><p>Analyze texts in the dataset and tokenize them (split by spaces, into n-grams, etc., at your discretion). This converts the text into a set of keywords/phrases/tokens.</p></li> 
+ <li><p>For each tag/label, create a set of its most important and relevant keywords/phrases/tokens.</p></li> 
+ <li><p>Create a rule to match text and tag by intersecting their keyword sets (the rule could be based on majority voting, the highest number of matching words, etc.).</p></li> 
+ <li><p>Using the algorithm from step 3, assign a Tag to each input text in the “hidden” dataset.</p></li> 
+</ol></div><h2>Input format</h2><div class="input-specification"><p>Each row corresponds to a separate text (Title + Subtitle), with the total number of texts denoted by <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        N
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       N
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span>, where <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mn>
+        10
+       </mn>
+       <mo separator="true">
+        ,
+       </mo>
+       <mn>
+        000
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       1 \leq N \leq 10,000
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">000</span></span></span></span></span>. The format is as follows:</p> 
+<p>———————————————————————————————————————————-</p> 
+<p>***Title***: How do Transformers work? ***Subtitle***: In this section, we will take a high-level look at the architecture of Transformer models.</p> 
+<p>***Title***: ...</p> 
+<p>...</p> 
+<p>...</p> 
+<p>Row N</p> 
+<p>———————————————————————————————————————————-</p> 
+<p>Code(Python):</p> 
+<pre><code>import sys
+input_data = sys.stdin.read()
+lines = input_data.splitlines()</code></pre></div><h2>Output format</h2><div class="output-specification"><p>A single string where each Tag is separated by ", ":</p> 
+<p>"<span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mtext>
+        ai
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        football
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        politics
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mo>
+        …
+       </mo>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        N-th&nbsp;Tag
+       </mtext>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \text{ai}, \text{football}, \text{politics}, \ldots, \text{N-th Tag}
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">ai</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">football</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">politics</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">N-th&nbsp;Tag</span></span></span></span></span></span>"</p></div><h2>Notes</h2><div class="notes"><p>All data is in English, and each article has only one unique Tag.</p></div></div>

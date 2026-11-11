@@ -1,0 +1,105 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Классификация статей</h1><table><tr class="time-limit"><td class="property-title">Ограничение времени</td><td>600&nbsp;секунд</td></tr><tr class="memory-limit"><td class="property-title">Ограничение памяти</td><td>300&nbsp;Мб</td></tr><tr class="input-file"><td class="property-title">Ввод</td><td colspan="1">стандартный ввод или input.txt</td></tr><tr class="output-file"><td class="property-title">Вывод</td><td colspan="1">стандартный вывод или output.txt</td></tr></table></div><h2></h2><div class="legend"><p>Старший метеоролог Адильхан работает в Казгидромете в Алматы и всегда стремится оставаться в авангарде научных достижений. Он следит за последними открытиями в области метеорологии и делится интересными статьями со своими коллегами. Однажды Адильхан поручил своему стажеру Дархану важное задание: проанализировать научные статьи и новости для метеорологической службы.</p> 
+<p>Однако Дархан, помимо своей любви к метеорологии, был заядлым читателем журнала Medium. Он часами читал, но вместо статей о климате присылал материалы о футболе, космосе и роботах. Адильхан был шокирован, когда на его столе оказались тексты о чемпионатах мира по футболу и космических полетах.</p> 
+<p>Поразмыслив, Адильхан понял, что Дархан просто не знает, как правильно классифицировать статьи. Поэтому он решил помочь своему стажеру и придумать способ эффективной сортировки текстов с использованием ключевых слов, которые четко указывали бы на тему статьи.</p> 
+<p>Классификация текстов с помощью ключевых слов — важная часть современных диалоговых систем (чат-боты, ассистенты, агенты), которые зачастую работают на основе LLM. Данный метод позволяет точно и надежно определять намерения пользователя и корректно направлять его по соответствующей схеме внутри диалога. Необходимо создать алгоритм, который на основе ключевых слов из датасета статей на Medium сможет корректно сопоставить тексту соответствующий Tag. Основной датасет, который нужен для этого, расположен по следующей ссылке: <a href="https://disk.yandex.ru/d/FXehRMjaXkwUTA">train_set.csv</a>.</p> 
+<p>В нем около 50 000 примеров и 95 уникальных классов/Tags. Датасет в формате csv, колонки разделены при помощи символа “\t”, то есть четырьмя пробелами или Tab.</p> 
+<p><strong>Текст</strong> — это заголовок и подзаголовок статьи.<br> <strong>Тег (Tag)</strong> — это метка или класс текста.<br> <strong>Ключевые слова</strong> — набор слов, извлеченных из множества текстов, относящихся к определенному тегу (например, для тега «football» ключевые слова: ‘Football’, ‘league of champions’, ‘cristiano’, ‘Cristiano Ronaldo’, ‘cr7’, ‘world cup’, ‘Ballon d’Or’).<br> <strong>Метрика</strong> или правило по которому будет выставляться балл: доля (%) правильно угаданных классов/Tags из скрытого датасета.</p> 
+<p><strong>Пример:</strong><br> <em>Текст</em> — Brazil win the World Cup for the fifth time in Japan and South Korea.<br> <em>Тег</em> — football</p> 
+<h1 id="общий-алгоритм-действий">Общий алгоритм действий:</h1> 
+<ol> 
+ <li><p>Анализируем тексты из датасета и токенизируем их (разделяем по пробелу, на n-граммы и т. д., на ваш выбор). Таким образом переводим текст в набор ключевых слов/фраз/токенов.</p></li> 
+ <li><p>Далее для каждого тега/метки создаем набор его наиболее важных и релевантных ключевых слов/фраз/токенов.</p></li> 
+ <li><p>Создаем правило для сопоставления текста и тега путем пересечения множеств их ключевых слов (правило может быть любое: голосование большинства, наибольшее количество совпадающих слов и т. д.).</p></li> 
+ <li><p>С помощью алгоритма из пункта 3 присваиваем каждому входному тексту из "скрытого" датасета его Tag.</p></li> 
+</ol></div><h2>Формат ввода</h2><div class="input-specification"><p>Каждая строка относится к отдельному тексту(Заголовок+Подзаголовок), количество текстов равно <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>
+        N
+       </mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       N
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span></span>, <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mn>
+        1
+       </mn>
+       <mo>
+        ≤
+       </mo>
+       <mi>
+        N
+       </mi>
+       <mo>
+        ≤
+       </mo>
+       <mn>
+        10
+       </mn>
+       <mo separator="true" lspace="0em" rspace="0em">
+        ,
+       </mo>
+       <mn>
+        000
+       </mn>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       1 \leq N \leq 10{,}000
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8193em;vertical-align:-0.136em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8389em;vertical-align:-0.1944em;"></span><span class="mord">10</span><span class="mord"><span class="mpunct">,</span></span><span class="mord">000</span></span></span></span></span>, в формате: ———————————————————————————————————————————-</p> 
+<p>***Title***: How do Transformers work? ***Subtitle***: In this section, we will take a high-level look at the architecture of Transformer models.</p> 
+<p>***Title***: ...</p> 
+<p>...</p> 
+<p>...</p> 
+<p>Строка N</p> 
+<p>———————————————————————————————————————————-</p> 
+<p>Код для считывания (Python):</p> 
+<pre><code>import sys
+input_data = sys.stdin.read()
+lines = input_data.splitlines()</code></pre></div><h2>Формат вывода</h2><div class="output-specification"><p>1 строка, каждый Tag разделен при помощи ", " :</p> 
+<p>"<span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mtext>
+        ai
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        football
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        politics
+       </mtext>
+       <mo separator="true">
+        ,
+       </mo>
+       <mo>
+        …
+       </mo>
+       <mo separator="true">
+        ,
+       </mo>
+       <mtext>
+        N-th&nbsp;Tag
+       </mtext>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       \text{ai}, \text{football}, \text{politics}, \ldots, \text{N-th Tag}
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord text"><span class="mord">ai</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">football</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">politics</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord text"><span class="mord">N-th&nbsp;Tag</span></span></span></span></span></span>"</p></div><h2>Примечания</h2><div class="notes"><p>Все данные на английском языке, каждая статья имеет только один уникальный Tag.</p></div></div>

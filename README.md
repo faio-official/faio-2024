@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 1st edition — tasks, materials & contest links.
+  🎓 1st edition — statements in three languages, figures, scorers and the original contest export.
 </p>
 
 <p align="center">
@@ -21,21 +21,39 @@
 
 ### 🧠 Qualification
 - 📘 **Readme:** [Open](./qualification/README.md)
-- 🔗 **Original contest:** [https://contest.yandex.ru/contest/71291/problems](https://contest.yandex.ru/contest/71291/problems)
+- 🔗 **Original contest:** [contest.yandex.ru/contest/71291](https://contest.yandex.ru/contest/71291/problems)
+- ⚠️ The 2024 qualification export was never provided, so only the round notes are here.
 
 ---
 
-### 🏆 Main competition
-- 📘 **Readme:** [Open](./day1/README.md)
-- 🔗 **Original contest:** [https://contest.yandex.ru/contest/69765/problems](https://contest.yandex.ru/contest/69765/problems)
+### 🏆 Finals (Main Competition)
+- 📘 **Round readme:** [English](./final/README.md) · [Қазақша](./final/README.kz.md) · [Русский](./final/README.ru.md)
+- 🔗 **Original contest:** [contest.yandex.ru/contest/69765](https://contest.yandex.ru/contest/69765/problems)
 
 **Problems:**
-[A — Math Test Results](./day1/A_Math_Test_Results.md) ·
-[B — The story of a meteorologist](./day1/B_The_story_of_a_meteorologist.md) ·
-[C — Radioactive decay](./day1/C_radioactive_decay.md) ·
-[D — K-means](./day1/D_Kmeans.md) ·
-[E — Text Classification](./day1/E_Text_Classification.md) ·
-[F — SVM](./day1/F_SVM.md)
+[A — Math Test Results](./final/a-math-test-results/) ·
+[B — The Story of a Meteorologist](./final/b-meteorologist/) ·
+[C — Radioactive Decay](./final/c-radioactive-decay/) ·
+[D — K-means](./final/d-kmeans/) ·
+[E — Text Classification](./final/e-text-classification/) ·
+[F — SVM](./final/f-svm/)
+
+---
+## What is in each problem folder
+
+| | |
+| --- | --- |
+| `en.md` · `kz.md` · `ru.md` | The statement as it ran on contest.faio.kz. |
+| `assets/` | The statement's figures. |
+| `checker/` | The real scorer — the same code the platform runs. |
+| `original/` | The untouched source the problem was migrated from — the Yandex Contest export, with the statement HTML per language. |
+| `README.md` | Scoring, provenance, and what is and isn't here. |
+
+Not published: answer keys, the participant data archives, and real participant
+submissions. Data is downloadable from the link in each statement. Two FAIO 2026
+scorers are withheld because they embed live grading secrets — each says so in place.
+
+**Upsolve any of it at [contest.faio.kz](https://contest.faio.kz).**
 
 ---
 
