@@ -1,10 +1,10 @@
 # Qualification — FAIO 2024
 
-**Solve it:** [FAIO 2024 on contest.faio.kz](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239)
+**Solve it:** [FAIO 2024 · Qualification](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239/contests/qualification) on contest.faio.kz
 
 **Originally ran on:** [Yandex Contest](https://contest.yandex.ru/contest/71291/problems/) *(old link)*
 
-The ten problems below are kept as they were set. Statements only — this round's export was never provided, so there are no figures or scorers here.
+The ten problems below are kept as they were set.
 
 ---
 

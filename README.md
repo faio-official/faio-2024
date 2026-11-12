@@ -8,7 +8,7 @@
 </h1>
 
 <p align="center">
-  🎓 1st edition — statements in three languages, figures, scorers and the original contest export.
+  🎓 1st edition — statements in three languages, figures and the original contest export.
 </p>
 
 <p align="center">
@@ -21,8 +21,8 @@
 
 ### 🧠 Qualification
 - 📘 **Readme:** [Open](./qualification/README.md)
-- 🔗 **Original contest:** [contest.yandex.ru/contest/71291](https://contest.yandex.ru/contest/71291/problems)
-- ⚠️ The 2024 qualification export was never provided, so only the round notes are here.
+- 🎯 **Solve it:** [FAIO 2024 · Qualification](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239/contests/qualification) on contest.faio.kz
+- 🔗 **Original contest:** [contest.yandex.ru/contest/71291](https://contest.yandex.ru/contest/71291/problems) *(old link)*
 
 ---
 
