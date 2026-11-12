@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Gravitational Matrix</h1><table><tr class="time-limit"><td class="property-title">Time limit</td><td>1&nbsp;second</td></tr><tr class="memory-limit"><td class="property-title">Memory limit</td><td>64&nbsp;Mb</td></tr><tr class="input-file"><td class="property-title">Input</td><td colspan="1">standard input or  input.txt</td></tr><tr class="output-file"><td class="property-title">Output</td><td colspan="1">standard output or  output.txt</td></tr></table></div><h2></h2><div class="legend"><p>Arman, known as the Gravitational Architect, encountered a problem in creating a stable gravitational field on the FAIO space station. To solve this, he needs to calculate complex matrices representing the interactions of gravitational fields. This calculation requires substantial effort, so he decided to seek help from Roony, the Spatial Stabilization Technician. Together, they plan to find the result of multiplying two matrices, representing different gravitational parameters.</p>
+<p>The input consists of three natural numbers <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span>, <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span>, and <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> – the dimensions of the matrices, where <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> and <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> are the number of rows and columns of the first matrix, and <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> and <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> are the number of rows and columns of the second matrix. Then, <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> lines follow, each containing <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> real numbers, representing the values in the first matrix.</p>
+<p>Then <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> lines are provided, each containing <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> real numbers, representing the values in the second matrix.</p>
+<p>It is necessary to output the result of multiplying the first matrix by the second so that Roony can correctly stabilize the gravitational processes on the station.</p>
+<p><strong>Constraints</strong>:</p>
+<ul>
+ <li>
+  <p>For matrix multiplication to be valid, the number of columns in the first matrix must match the number of rows in the second matrix: <span class="math inline"><span class="katex"><span class="katex-mathml">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <semantics>
+        <mrow>
+         <mi>b</mi>
+        </mrow>
+        <annotation encoding="application/x-tex">
+         b
+        </annotation>
+       </semantics>
+      </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span>.</p></li>
+ <li>
+  <p>Limits on matrix dimensions: <span class="math inline"><span class="katex"><span class="katex-mathml">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <semantics>
+        <mrow>
+         <mn>1</mn>
+         <mo>≤</mo>
+         <mi>a</mi>
+         <mo separator="true">,</mo>
+         <mi>b</mi>
+         <mo separator="true">,</mo>
+         <mi>c</mi>
+         <mo>≤</mo>
+         <mn>300</mn>
+        </mrow>
+        <annotation encoding="application/x-tex">
+         1 \leq a, b, c \leq 300
+        </annotation>
+       </semantics>
+      </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">300</span></span></span></span></span>.</p></li>
+</ul>
+<p>The result of the multiplication will help Arman and Roony achieve stable artificial gravity and successfully complete their mission.</p>
+<p><strong>Output format</strong>: The result of multiplying the two matrices should be presented as <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> rows, each containing <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> real numbers separated by spaces.</p></div></div>

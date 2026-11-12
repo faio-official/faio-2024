@@ -20,9 +20,21 @@
 ---
 
 ### 🧠 Qualification
-- 📘 **Readme:** [Open](./qualification/README.md)
+- 📘 **Round readme:** [English](./qualification/README.md) · [Қазақша](./qualification/README.kz.md) · [Русский](./qualification/README.ru.md)
 - 🎯 **Solve it:** [FAIO 2024 · Qualification](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239/contests/qualification) on contest.faio.kz
 - 🔗 **Original contest:** [contest.yandex.ru/contest/71291](https://contest.yandex.ru/contest/71291/problems) *(old link)*
+
+**Problems:**
+[Warm-up 1 — Choosing a Rocket](./qualification/warmup-1-choosing-a-rocket/) ·
+[Warm-up 2 — Expected Value](./qualification/warmup-2-expected-value/) ·
+[A — Flight Speed](./qualification/a-flight-speed/) ·
+[B — Flight Speed 2: Data Lost](./qualification/b-flight-speed-2-data-lost/) ·
+[C — Ray is Behaving Bad](./qualification/c-ray-behaving-bad/) ·
+[D — Gravitational Matrix](./qualification/d-gravitational-matrix/) ·
+[E — Into Space](./qualification/e-into-space/) ·
+[F — Meteorites with Gold](./qualification/f-meteorites-with-gold/) ·
+[G — Ray Is Misbehaving 2](./qualification/g-ray-misbehaving-2/) ·
+[H — Dividing the Stars](./qualification/h-dividing-the-stars/)
 
 ---
 

@@ -30,4 +30,4 @@ Fizmat AI Olympiad 2024 финалына қош келдіңіз. Оның ал�
 | E | [Text Classification](./e-text-classification/) | [English](./e-text-classification/en.md) · [Қазақша](./e-text-classification/kz.md) · [Русский](./e-text-classification/ru.md) |
 | F | [SVM](./f-svm/) | [English](./f-svm/en.md) · [Қазақша](./f-svm/kz.md) · [Русский](./f-svm/ru.md) |
 
-Each problem folder holds the statement, its figures, the scorer and the original Yandex Contest export it was migrated from.
+Each problem folder holds the statement in three languages, its figures and the original Yandex Contest export it was migrated from.

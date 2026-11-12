@@ -1,0 +1,173 @@
+<!DOCTYPE html
+  SYSTEM "html">
+<div class="problem-statement"><div class="header"><h1 class="title">Гравитациялық матрица</h1><table><tr class="time-limit"><td class="property-title">Уақыт шектеуі</td><td>1&nbsp;секунд</td></tr><tr class="memory-limit"><td class="property-title">Жадты шектеу</td><td>64&nbsp;Мб</td></tr><tr class="input-file"><td class="property-title">Енгізу</td><td colspan="1">стандартты енгізу немесе  input.txt</td></tr><tr class="output-file"><td class="property-title">Шығару</td><td colspan="1">стандартты шығару немесе  output.txt</td></tr></table></div><h2></h2><div class="legend"><p>Арман, Гравитациялық архитектор ретінде танымал, FAIO ғарыш станциясында тұрақты гравитациялық өріс құру мәселесіне тап болды. Ол үшін оған гравитациялық өрістердің өзара әрекеттесу матрицаларын есептеу қажет. Бұл есептеу көп еңбекті қажет етеді, сондықтан ол кеңістіктік тұрақтандыру технигі Руниден көмек сұрауға шешім қабылдады. Олар әртүрлі гравитациялық параметрлерді білдіретін екі матрицаның көбейтіндісін табуды жоспарлап отыр.</p>
+<p>Енгізу барысында үш натурал сан <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span>, <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> және <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> беріледі, мұндағы <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> және <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> – бірінші матрицаның жолдары мен бағандарының саны, ал <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> және <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> – екінші матрицаның жолдары мен бағандарының саны. Содан кейін <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> жол енгізіледі, олардың әрқайсысында бірінші матрицаның мәндерін білдіретін <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> нақты сандары бар.</p>
+<p>Содан кейін <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>b</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       b
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span> жол енгізіледі, олардың әрқайсысында екінші матрицаның мәндерін білдіретін <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> нақты сандары бар.</p>
+<p>Рунидің станциядағы гравитациялық процестерді дұрыс тұрақтандыруы үшін бірінші матрицаны екінші матрицаға көбейту нәтижесін шығару қажет.</p>
+<p><strong>Шектеулер</strong>:</p>
+<ul>
+ <li>
+  <p>Матрицаларды дұрыс көбейту үшін бірінші матрицаның бағандарының саны екінші матрицаның жолдарының санына сәйкес келуі керек: <span class="math inline"><span class="katex"><span class="katex-mathml">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <semantics>
+        <mrow>
+         <mi>b</mi>
+        </mrow>
+        <annotation encoding="application/x-tex">
+         b
+        </annotation>
+       </semantics>
+      </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span></span></span></span></span>.</p></li>
+ <li>
+  <p>Матрицалардың өлшемдеріне қойылатын шектеулер: <span class="math inline"><span class="katex"><span class="katex-mathml">
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+       <semantics>
+        <mrow>
+         <mn>1</mn>
+         <mo>≤</mo>
+         <mi>a</mi>
+         <mo separator="true">,</mo>
+         <mi>b</mi>
+         <mo separator="true">,</mo>
+         <mi>c</mi>
+         <mo>≤</mo>
+         <mn>300</mn>
+        </mrow>
+        <annotation encoding="application/x-tex">
+         1 \leq a, b, c \leq 300
+        </annotation>
+       </semantics>
+      </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7804em;vertical-align:-0.136em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">c</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">300</span></span></span></span></span>.</p></li>
+</ul>
+<p>Көбейтінді нәтижесі Арман мен Руниге тұрақты жасанды гравитацияға қол жеткізуге және олардың миссиясын сәтті аяқтауға көмектеседі.</p>
+<p><strong>Шығару форматы</strong>: Матрицалардың көбейтіндісі <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>a</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       a
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">a</span></span></span></span></span> жол түрінде берілуі керек, олардың әрқайсысында <span class="math inline"><span class="katex"><span class="katex-mathml">
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+     <semantics>
+      <mrow>
+       <mi>c</mi>
+      </mrow>
+      <annotation encoding="application/x-tex">
+       c
+      </annotation>
+     </semantics>
+    </math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">c</span></span></span></span></span> нақты сандары бос орындармен бөлінген.</p></div></div>
