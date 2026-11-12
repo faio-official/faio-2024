@@ -15,5 +15,4 @@ FAIO 2024, Finals (Main Competition).
 | File                      | What it is |
 | ------------------------- | --- |
 | `en.md`, `kz.md`, `ru.md` | The statement as it ran on contest.faio.kz. |
-| `checker/`                | The real scorer — `evaluate.py`. |
-| `original/`               | The untouched Yandex Contest export: the statement HTML per language under `statements/`, the jury checker under `checkers/`, and the statement figures. |
+| `original/` | The statement as it was published on the original platform. |

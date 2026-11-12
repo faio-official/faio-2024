@@ -45,7 +45,6 @@
 | --- | --- |
 | `en.md` · `kz.md` · `ru.md` | The statement as it ran on contest.faio.kz. |
 | `assets/` | The statement's figures. |
-| `checker/` | The real scorer — the same code the platform runs. |
 | `original/` | The untouched source the problem was migrated from — the Yandex Contest export, with the statement HTML per language. |
 | `README.md` | Scoring and where to solve it. |
 
