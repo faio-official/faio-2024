@@ -49,7 +49,7 @@
 | `original/` | The untouched source the problem was migrated from — the Yandex Contest export, with the statement HTML per language. |
 | `README.md` | Scoring and where to solve it. |
 
-**Upsolve any of it at [contest.faio.kz](https://contest.faio.kz).**
+**Solve it all at [FAIO 2024 on contest.faio.kz](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239).**
 
 ---
 

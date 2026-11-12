@@ -6,7 +6,7 @@ FAIO 2024, Finals (Main Competition).
 
 **Scoring.** Accuracy over the predictions CSV, scaled to 0–100.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2024 · Final](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239/contests/final) on contest.faio.kz
 
 **Originally ran on:** [Yandex Contest — problem E](https://contest.yandex.ru/contest/69765/problems/E/) *(old link)*
 

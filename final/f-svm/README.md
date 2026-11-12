@@ -6,7 +6,7 @@ FAIO 2024, Finals (Main Competition).
 
 **Scoring.** Geometric accuracy above 97% per test; final score is the mean over 80 tests.
 
-**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+**Solve it:** [FAIO 2024 · Final](https://contest.faio.kz/spaces/01a1b4cb-0bab-7664-985a-1ecb5927c239/contests/final) on contest.faio.kz
 
 **Originally ran on:** [Yandex Contest — problem F](https://contest.yandex.ru/contest/69765/problems/F/) *(old link)*
 
