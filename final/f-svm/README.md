@@ -6,9 +6,9 @@ FAIO 2024, Finals (Main Competition).
 
 **Scoring.** Geometric accuracy above 97% per test; final score is the mean over 80 tests.
 
-**Originally ran on:** Yandex Contest — [contest page](https://contest.yandex.ru/contest/69765/problems/F/).
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
 
-**Upsolve it:** [contest.faio.kz](https://contest.faio.kz).
+**Originally ran on:** [Yandex Contest — problem F](https://contest.yandex.ru/contest/69765/problems/F/) *(old link)*
 
 ## What is in this folder
 
@@ -18,7 +18,3 @@ FAIO 2024, Finals (Main Competition).
 | `assets/`                 | Statement figures (2 files). |
 | `checker/`                | The real scorer — `aggregator.py`, `checker.py`. |
 | `original/`               | The untouched Yandex Contest export: the statement HTML per language under `statements/`, the jury checker under `checkers/`, and the statement figures. |
-
----
-
-Answer keys, the participant data archives and real participant submissions are deliberately not published. The data is downloadable from the statement's link on contest.faio.kz.

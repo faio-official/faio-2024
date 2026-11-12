@@ -17,6 +17,10 @@ Welcome to the finals of the Fizmat AI Olympiad 2024. Its six problems move from
 - **E — Text Classification.** Assign each Medium article one of 95 tags using keyword matching built from a training set.
 - **F — SVM.** Fit a linear support vector machine: output the separating line that classifies 2D labelled points with the maximum margin.
 
+**Solve it:** [contest.faio.kz](https://contest.faio.kz)
+
+**Originally ran on:** [Yandex Contest](https://contest.yandex.ru/contest/69765/problems/) *(old link)*
+
 | # | Problem | Statement |
 | --- | --- | --- |
 | A | [Math Test Results](./a-math-test-results/) | [English](./a-math-test-results/en.md) · [Қазақша](./a-math-test-results/kz.md) · [Русский](./a-math-test-results/ru.md) |

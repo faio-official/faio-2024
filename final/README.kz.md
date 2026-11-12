@@ -17,6 +17,10 @@ Fizmat AI Olympiad 2024 финалына қош келдіңіз. Оның ал�
 - **E — Мақалалардың жіктелуі.** Оқыту жиынынан құрылған кілт сөздерді сәйкестендіру арқылы әрбір Medium мақаласына 95 тегтің бірін тағайындаңыз.
 - **F — SVM.** Сызықтық тірек векторлар әдісін құрыңыз: белгіленген 2D нүктелерді ең үлкен жиекпен жіктейтін бөлуші түзуді шығарыңыз.
 
+**Шығару:** [contest.faio.kz](https://contest.faio.kz)
+
+**Бастапқы платформа:** [Yandex Contest](https://contest.yandex.ru/contest/69765/problems/) *(ескі сілтеме)*
+
 | # | Есеп | Шарт |
 | --- | --- | --- |
 | A | [Math Test Results](./a-math-test-results/) | [English](./a-math-test-results/en.md) · [Қазақша](./a-math-test-results/kz.md) · [Русский](./a-math-test-results/ru.md) |
